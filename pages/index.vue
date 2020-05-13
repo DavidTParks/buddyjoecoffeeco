@@ -1,6 +1,7 @@
 <template>
   <div class="bg-gray-100 min-h-screen">
     <Hero/>
+    <DoublePhotoSection/>
     <PricingSection/>
   </div>
 </template>
@@ -10,12 +11,14 @@ import Hero from '~/components/Hero.vue'
 import StatList from '~/components/StatList.vue'
 import PhotoSection from '~/components/PhotoSection.vue'
 import PricingSection from '~/components/PricingSection.vue'
+import DoublePhotoSection from '~/components/DoublePhotoSection.vue'
 export default {
   components: {
     Hero,
     StatList,
     PhotoSection,
-    PricingSection
+    PricingSection,
+    DoublePhotoSection
   }
 }
 </script>

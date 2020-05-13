@@ -33,6 +33,7 @@
             </a>
             <div class="-mr-2 flex items-center md:hidden">
               <button
+              @click="isNavOpen = !isNavOpen"
                 type="button"
                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
               >
@@ -55,11 +56,11 @@
             <a
               href="#"
               class="ml-10 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-            >Subscriptions</a>
+            >Buddy Joe Club</a>
             <a
               href="#"
               class="ml-10 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-            >About</a>
+            >About Us</a>
           </div>
         </div>
         <div class="hidden md:block text-right">
@@ -84,15 +85,16 @@
         From: "opacity-100 scale-100"
         To: "opacity-0 scale-95"
       -->
-      <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+      <div v-show="isNavOpen" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
         <div class="rounded-lg shadow-md">
           <div class="rounded-lg bg-white shadow-xs overflow-hidden">
             <div class="px-5 pt-4 flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="/img/logos/workflow-mark-on-white.svg" alt />
+                <img class="h-8 w-auto" src="~/assets/logos/buddyjoelogo1.png" alt />
               </div>
               <div class="-mr-2">
                 <button
+                    @click="isNavOpen = !isNavOpen"
                   type="button"
                   class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                 >
@@ -111,19 +113,15 @@
               <a
                 href="#"
                 class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-              >Product</a>
+              >Coffees</a>
               <a
                 href="#"
                 class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-              >Features</a>
+              >Buddy Joe Club</a>
               <a
                 href="#"
                 class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-              >Marketplace</a>
-              <a
-                href="#"
-                class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-              >Company</a>
+              >About Us</a>
             </div>
             <div>
               <a
@@ -204,6 +202,11 @@ import Vector from "~/assets/logos/buddyjoenotext.svg";
 export default {
   components: {
     Vector
+  },
+  data() {
+      return {
+          isNavOpen: false
+      }
   }
 };
 </script>

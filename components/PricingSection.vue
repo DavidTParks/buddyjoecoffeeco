@@ -99,7 +99,7 @@
               <div class="bg-white rounded-t-lg px-6 pt-12 pb-10">
                 <div>
                   <h2 class="text-center text-3xl leading-9 font-semibold text-gray-900 sm:-mx-6">
-                    3 Bags
+                    2 Bags
                   </h2>
                   <div class="mt-4 flex items-center justify-center">
                     <span class="px-3 flex items-start text-6xl leading-none tracking-tight text-gray-900 sm:text-6xl">
@@ -107,7 +107,7 @@
                         $
                       </span>
                       <span class="font-extrabold">
-                        40
+                        28
                       </span>
                     </span>
                     <span class="text-2xl leading-8 font-medium text-gray-400">
@@ -185,7 +185,7 @@
                 <div class="bg-white px-6 py-10">
                   <div>
                     <h2 class="text-center text-2xl leading-8 font-medium text-gray-900">
-                      2 Bags
+                      3 Bags
                     </h2>
                     <div class="mt-4 flex items-center justify-center">
                       <span class="px-3 flex items-start text-6xl leading-none tracking-tight text-gray-900">
@@ -193,7 +193,7 @@
                           $
                         </span>
                         <span class="font-extrabold">
-                          28
+                          40
                         </span>
                       </span>
                       <span class="text-xl leading-7 font-medium text-gray-400">

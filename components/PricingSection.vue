@@ -78,7 +78,7 @@
                   <div class="mt-8">
                     <div class="rounded-lg shadow-md">
                       <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
-                        Start your trial
+                        Subscribe
                       </a>
                     </div>
                   </div>
@@ -172,7 +172,7 @@
                 <div class="mt-10">
                   <div class="rounded-lg shadow-md">
                     <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-primary-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150">
-                      Start your trial
+                      Subscribe
                     </a>
                   </div>
                 </div>
@@ -238,7 +238,7 @@
                   <div class="mt-8">
                     <div class="rounded-lg shadow-md">
                       <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
-                        Start your trial
+                        Subscribe
                       </a>
                     </div>
                   </div>

@@ -33,7 +33,7 @@
                           $
                         </span>
                         <span class="font-extrabold">
-                          15
+                          14.99
                         </span>
                       </span>
                       <span class="text-xl leading-7 font-medium text-gray-400">
@@ -78,14 +78,14 @@
                   <div class="mt-8">
                     <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Blend</label>
                     <select v-model="oneBagBlend" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
-                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535774872&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">Cowboy Blend</option>
-                      <option selected value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565331608&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">Breakfast Blend</option>
-                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548751000&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">French Roast</option>
+                      <option value="Cowboy">Cowboy Blend</option>
+                      <option selected value="Breakfast">Breakfast Blend</option>
+                      <option value="French">French Roast</option>
                     </select>
                   </div>
                   <div class="mt-4">
                     <div class="rounded-lg shadow-md">
-                      <a :href="oneBagBlend" target="_blank" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                      <a :href="oneBagComputed" target="_blank" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Subscribe
                       </a>
                     </div>
@@ -115,7 +115,7 @@
                         $
                       </span>
                       <span class="font-extrabold">
-                        28
+                        27.99
                       </span>
                     </span>
                     <span class="text-2xl leading-8 font-medium text-gray-400">
@@ -209,7 +209,7 @@
                           $
                         </span>
                         <span class="font-extrabold">
-                          40
+                          39.99
                         </span>
                       </span>
                       <span class="text-xl leading-7 font-medium text-gray-400">
@@ -227,7 +227,7 @@
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Pariatur quod similique
+                        Access to preview blends
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
@@ -237,7 +237,7 @@
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Sapiente libero doloribus
+                        Upgrade any time
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
@@ -247,7 +247,7 @@
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Vel ipsa esse repudiandae
+                        24/7 delivery
                       </p>
                     </li>
                   </ul>
@@ -261,7 +261,7 @@
                   </div>
                   <div class="mt-4">
                     <div class="rounded-lg shadow-md">
-                      <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                      <a :href="threeBagBlend" target="_blank" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Subscribe
                       </a>
                     </div>
@@ -281,9 +281,27 @@
 export default {
   data() {
     return {
-      oneBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565331608&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500',
+      oneBagBlend: 'Breakfast',
       twoBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548783768&g=146537&fn=1&ft=3&dp=$28.00&rdp=1&rup=2800',
       threeBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535840408&g=146537&fn=1&ft=3&dp=$40.00&rdp=1&rup=4000',
+    }
+  },
+  computed: {
+    oneBagComputed() {
+      switch(this.oneBagBlend) {
+        case 'Cowboy':
+          return 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535774872&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500';
+          break;
+        case 'Breakfast':
+          return 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565331608&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500';
+          break;
+        case 'French':
+          return 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548751000&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500';
+          break;
+        default:
+          return 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535774872&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500';
+          break;
+      }
     }
   }
 }

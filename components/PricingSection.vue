@@ -1,5 +1,5 @@
 <template>
-<div class="bg-gray-900">
+<div class="bg-gray-900" id="pricing">
   <div class="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
     <div class="text-center">
       <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
@@ -76,8 +76,16 @@
                     </li>
                   </ul>
                   <div class="mt-8">
+                    <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Blend</label>
+                    <select v-model="oneBagBlend" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535774872&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">Cowboy Blend</option>
+                      <option selected value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565331608&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">Breakfast Blend</option>
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548751000&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500">French Roast</option>
+                    </select>
+                  </div>
+                  <div class="mt-4">
                     <div class="rounded-lg shadow-md">
-                      <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                      <a :href="oneBagBlend" target="_blank" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Subscribe
                       </a>
                     </div>
@@ -169,9 +177,17 @@
                     </p>
                   </li>
                 </ul>
-                <div class="mt-10">
+                <div class="mt-8">
+                    <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Blend</label>
+                    <select v-model="twoBagBlend" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535807640&g=146537&fn=1&ft=3&dp=$28.00&rdp=1&rup=2800">Cowboy Blend</option>
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565397144&g=146537&fn=1&ft=3&dp=$28.00&rdp=1&rup=2800">Breakfast Blend</option>
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548783768&g=146537&fn=1&ft=3&dp=$28.00&rdp=1&rup=2800" selected>French Roast</option>
+                    </select>
+                  </div>
+                <div class="mt-4">
                   <div class="rounded-lg shadow-md">
-                    <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-primary-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150">
+                    <a :href="twoBagBlend" target="_blank" class="block w-full text-center rounded-lg border border-transparent bg-primary-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary transition ease-in-out duration-150">
                       Subscribe
                     </a>
                   </div>
@@ -236,6 +252,14 @@
                     </li>
                   </ul>
                   <div class="mt-8">
+                    <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Blend</label>
+                    <select v-model="threeBagBlend" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535840408&g=146537&fn=1&ft=3&dp=$40.00&rdp=1&rup=4000" selected>Cowboy Blend</option>
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565429912&g=146537&fn=1&ft=3&dp=$40.00&rdp=1&rup=4000">Breakfast Blend</option>
+                      <option value="https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548816536&g=146537&fn=1&ft=3&dp=$40.00&rdp=1&rup=4000">French Roast</option>
+                    </select>
+                  </div>
+                  <div class="mt-4">
                     <div class="rounded-lg shadow-md">
                       <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-primary-600 hover:text-primary-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Subscribe
@@ -252,3 +276,15 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      oneBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452197626008&v=35161565331608&g=146537&fn=1&ft=3&dp=$15.00&rdp=1&rup=1500',
+      twoBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452194480280&v=35161548783768&g=146537&fn=1&ft=3&dp=$28.00&rdp=1&rup=2800',
+      threeBagBlend: 'https://buddy-joe-coffee-co.myshopify.com/tools/checkout/buy_button/add_to_cart?p=5452190482584&v=35161535840408&g=146537&fn=1&ft=3&dp=$40.00&rdp=1&rup=4000',
+    }
+  }
+}
+</script>

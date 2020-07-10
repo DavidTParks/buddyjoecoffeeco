@@ -1,7 +1,8 @@
 <template>
   <div class="bg-gray-100 min-h-screen">
     <Hero2/>
-    <DoublePhotoSection/>
+    <!-- <DoublePhotoSection/> -->
+    <MeetTheBuddies/>
     <PricingSection/>
   </div>
 </template>
@@ -13,6 +14,7 @@ import StatList from '~/components/StatList.vue'
 import PhotoSection from '~/components/PhotoSection.vue'
 import PricingSection from '~/components/PricingSection.vue'
 import DoublePhotoSection from '~/components/DoublePhotoSection.vue'
+import MeetTheBuddies from '~/components/MeetTheBuddies.vue'
 export default {
   components: {
     Hero,
@@ -20,6 +22,7 @@ export default {
     StatList,
     PhotoSection,
     PricingSection,
+    MeetTheBuddies,
     DoublePhotoSection
   }
 }

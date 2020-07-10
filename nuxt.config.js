@@ -12,7 +12,30 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content:
+          "Buddy Joe Coffee co. provides the highest quality blends from Temecula, California. We are a one-stop shop for everything coffee so you can get your cup of Joe and go."
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "buddy joe coffee, coffee subscription, buddy joe, buddy joe coffee co"
+      },
+      { name: "og:title", content: `Buddy Joe Coffee Co. | High Quality Coffee From California` },
+      {
+        name: "og:description",
+        content:
+          "Buddy Joe Coffee co. provides the highest quality blends from Temecula, California. We are a one-stop shop for everything coffee so you can get your cup of Joe and go."
+      },
+      { name: "og:url", content: `http://www.buddyjoecoffeeco.com/` },
+      { name: "og:type", content: "website" },
+      {
+        name: "og:image",
+        content: `https://davidparksdev.s3.us-east-2.amazonaws.com/breakfast_blend.jpg`
+      },
+      {
+        name: "og:image:secure_url",
+        content: `https://davidparksdev.s3.us-east-2.amazonaws.com/breakfast_blend.jpg`
       }
     ],
     link: [

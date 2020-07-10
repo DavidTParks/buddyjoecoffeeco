@@ -97,11 +97,13 @@
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
             >Buddy Joe Coffee co. provides the highest quality blends from Temecula, California. We are a one-stop shop for everything coffee so you can get your cup of Joe and go.</p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <a
-                href="#pricing"
+              <a href="#pricing">
+              <button
+                
                 type="submit"
                 class="mt-3 w-full px-10 py-4 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
-              >Shop Coffee</a>
+              >Shop Coffee</button>
+              </a>
             </div>
           </div>
         </div>

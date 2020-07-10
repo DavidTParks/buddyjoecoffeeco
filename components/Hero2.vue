@@ -30,14 +30,6 @@
               </div>
             </div>
             <div class="hidden md:block md:ml-10 md:pr-4">
-              <a
-                href="#pricing"
-                class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              >Coffee</a>
-              <a
-                href="#"
-                class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              >Buddy Joe Club</a>
             </div>
           </nav>
         </div>
@@ -84,17 +76,7 @@
                 <a
                   href="#"
                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                >Buddy Joe Club</a>
-                <a
-                  href="#"
-                  class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                 >About Us</a>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  class="block w-full px-5 py-3 text-center font-medium text-primary-600 bg-gray-50 hover:bg-gray-100 hover:text-primary-700 focus:outline-none focus:bg-gray-100 focus:text-primary-700 transition duration-150 ease-in-out"
-                >Cart</a>
               </div>
             </div>
           </div>
@@ -115,10 +97,11 @@
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
             >Buddy Joe Coffee co. provides the highest quality blends from Temecula, California. We are a one-stop shop for everything coffee so you can get your cup of Joe and go.</p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <button
+              <a
+                href="#pricing"
                 type="submit"
                 class="mt-3 w-full px-10 py-4 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
-              >Shop Coffee</button>
+              >Shop Coffee</a>
             </div>
           </div>
         </div>

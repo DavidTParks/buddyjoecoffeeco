@@ -72,8 +72,13 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
+    "@nuxtjs/sitemap",
     "nuxt-svg-loader"
   ],
+  sitemap: {
+    hostname: "http://www.buddyjoecoffeeco.com/",
+    gzip: true,
+  },
   /*
    ** Build configuration
    */

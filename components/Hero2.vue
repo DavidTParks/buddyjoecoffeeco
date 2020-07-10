@@ -11,7 +11,7 @@
                 <a href="#">
                   <img class="h-8 w-auto sm:h-10" src="~/assets/logos/buddyjoelogo1.png" alt />
                 </a>
-                <div class="-mr-2 flex items-center md:hidden">
+                <div class="hidden -mr-2 flex items-center md:hidden">
                   <button
                     @click="isNavOpen = !isNavOpen"
                     type="button"

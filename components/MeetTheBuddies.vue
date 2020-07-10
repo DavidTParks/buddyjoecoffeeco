@@ -97,7 +97,7 @@
             />
           </svg>
           <img
-            class="relative mx-auto"
+            class="relative mx-auto rounded-lg shadow-lg"
             width="490"
             src="~/assets/logos/breakfast_blend.jpg"
             alt=""
@@ -187,7 +187,7 @@
               />
             </svg>
             <img
-              class="relative mx-auto"
+              class="relative mx-auto rounded-lg shadow-lg"
               width="490"
               src="~/assets/logos/cowboy_blend.jpg"
               alt=""
@@ -244,7 +244,7 @@
             />
           </svg>
           <img
-            class="relative mx-auto"
+            class="relative mx-auto rounded-lg shadow-lg"
             width="490"
             src="~/assets/logos/french_blend.jpg"
             alt=""

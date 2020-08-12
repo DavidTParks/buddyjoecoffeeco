@@ -89,7 +89,7 @@
               >
                 Add To Cart
                   <svg
-                    class="h-4 w-4 rotate ml-2"
+                    class="h-4 w-4 ml-2"
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"

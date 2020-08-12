@@ -3,7 +3,6 @@
     <Hero2/>
     <!-- <DoublePhotoSection/> -->
     <MeetTheBuddies/>
-    <PricingSection/>
   </div>
 </template>
 
@@ -24,7 +23,7 @@ export default {
     PricingSection,
     MeetTheBuddies,
     DoublePhotoSection
-  }
+  },
 }
 </script>
 

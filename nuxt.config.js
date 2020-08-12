@@ -1,6 +1,10 @@
-
+require("dotenv").config();
+const fetch = require("node-fetch");
+const shopify = require("shopify-buy");
 export default {
   mode: "universal",
+  target: 'static',
+  components: true,
   /*
    ** Headers of the page
    */
@@ -73,8 +77,27 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     "@nuxtjs/sitemap",
-    "nuxt-svg-loader"
+    "nuxt-svg-loader",
+    "nuxt-shopify",
   ],
+  shopify: {
+    /**
+     * Your shopify domain
+     */
+    domain: "buddy-joe-coffee-co.myshopify.com",
+
+    /**
+     * Your shopify storefront access token
+     */
+    storefrontAccessToken: process.env.SHOPIFY_TOKEN,
+
+    /**
+     * This will be larger than the optimized version, as it will contain all fields that are available in the
+     * Storefront API. (https://help.shopify.com/en/api/custom-storefronts/storefront-api/reference)
+     * This should only be used when you need to add custom queries to supplement the JS Buy SDK queries.
+     */
+    unoptimized: false
+  },
   sitemap: {
     hostname: "http://www.buddyjoecoffeeco.com/",
     gzip: true,

@@ -69,10 +69,10 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3">
-                <a
-                  href="#"
+                <nuxt-link
+                  to="/coffee"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                >Coffee</a>
+                >Coffee</nuxt-link>
                 <a
                   href="#"
                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
@@ -97,13 +97,13 @@
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
             >Buddy Joe Coffee co. provides the highest quality blends from Temecula, California. We are a one-stop shop for everything coffee so you can get your cup of Joe and go.</p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <a href="#pricing">
+              <nuxt-link to="/coffee">
               <button
                 
                 type="submit"
                 class="mt-3 w-full px-10 py-4 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
               >Shop Coffee</button>
-              </a>
+              </nuxt-link>
             </div>
           </div>
         </div>

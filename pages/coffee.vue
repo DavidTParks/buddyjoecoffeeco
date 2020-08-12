@@ -2,9 +2,9 @@
   <div class="">
     <div class="grid grid-cols-3 gap-8">
       <template v-for="product in products">
-        <div class="relative" :key="product.id">
+        <div class="relative flex flex-col bg-white rounded-b-lg shadow-md" :key="product.id">
           <div
-            class="shadow-lg rounded-lg overflow-hidden bg-white flex flex-col"
+            class="rounded-t-lg overflow-hidden bg-white flex flex-col"
           >
             <img :src="product.images[0].src" />
           </div>
@@ -21,7 +21,7 @@
                 type="button"
                 class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150"
               >
-                Purchase
+                Add To Cart
               </button>
             </span>
           </div>

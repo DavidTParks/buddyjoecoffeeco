@@ -1,6 +1,6 @@
 <template>
   <div class="w-full relative mb-8 sm:mb-4">
-    <nuxt-link class="cursor-pointer" :to="`/coffee/${product.id}`">
+    <nuxt-link class="cursor-pointer" :to="`/coffees/${product.id}`">
       <!-- <img class="object-cover h-96 sm:h-72 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText"> -->
       <img
         class="object-cover h-96 sm:h-72 w-full overflow-hidden"

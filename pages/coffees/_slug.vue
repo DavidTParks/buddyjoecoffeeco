@@ -160,7 +160,7 @@ export default {
         //Open Graph og:image:secure_url
         {
           name: "og:title",
-          content: `${this.coffee.title} -Buddy Joe Coffee Co.`
+          content: `${this.coffee.title} - Buddy Joe Coffee Co.`
         },
         { name: "og:description", content: this.coffee.description },
         { name: "og:image", content: `${this.coffee.images[0].src}` },

@@ -6,7 +6,7 @@
       >Your Cart</h1>
       <nuxt-link
         class="flex justify-center mt-2 cursor-pointer w-full text-center underline"
-        to="/candles"
+        to="/coffee"
         v-if="cart.length > 0"
       >Continue shopping</nuxt-link>
       <div

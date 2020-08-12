@@ -1,5 +1,40 @@
 <template>
-  <div class="">
+ <div class="min-h-screen bg-gray-100 pb-24 pt-24">
+    <div class="py-8">
+      <div class="max-w-screen-xl mx-auto sm:pr-6 lg:pr-6">
+        <ul class="flex items-center px-6 sm:w-1/4">
+          <li class="breadcrumb-style">
+            <nuxt-link class="mr-2" to="/">Home</nuxt-link>
+            <svg
+              class="h-4 w-4"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="#4A5568"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </li>
+          <li class="breadcrumb-style">
+            <nuxt-link class="mr-2" to="/coffee">Coffee</nuxt-link>
+          </li>
+        </ul>
+        <div class="flex-col flex sm:flex-row">
+          <div class="w-full">
+            <ProductList />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="">
     <div class="grid grid-cols-3 gap-8">
       <template v-for="product in products">
         <div class="relative flex flex-col bg-white rounded-b-lg shadow-md" :key="product.id">
@@ -33,7 +68,7 @@
         </div>
       </template>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>

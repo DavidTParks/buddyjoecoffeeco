@@ -36,7 +36,7 @@
                 <td class="pb-4 pt-4 inline-flex flex-shrink flex-col md:flex-row">
                   <img class="h-24 w-24 object-cover" :src="lineItem.variant.image.src" />
                   <div class="inline-flex flex-col ml-0 md:ml-4">
-                    <h3 class="font-bold mt-2">{{lineItem.title}}</h3>
+                    <h3 class="font-bold mt-2">{{lineItem.title}} ({{lineItem.variant.title}})</h3>
                     <a
                       @click="removeItemFromCart(lineItem.variant.id)"
                       class="cursor-pointer w-32 mt-4 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-primary-300 transition duration-150 ease-in-out"

@@ -75,16 +75,19 @@
             <p
               class="text-base text-gray-900 mt-4 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0"
             >{{coffee.description}}</p>
+            <div class="mt-12 mb-6">
+              <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Type</label>
+              <select v-model="selectedType" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                <option value="Whole Bean" selected>Whole Bean</option>
+                <option value="Ground">Ground</option>
+              </select>
+            </div>
             <div class="flex items-center justify-center flex-col mt-12">
               <button
-                v-if="cart.indexOf(coffee.variants[0].id) === -1"
                 @click="addItemToCart"
                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 Add To Cart
-                <template
-                  v-if="cartItemsLoading.length > 0 && cartItemsLoading.indexOf(coffee.variants[0].id) !== -1"
-                >
                   <svg
                     class="h-4 w-4 rotate ml-2"
                     aria-hidden="true"
@@ -100,34 +103,9 @@
                       d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
                     />
                   </svg>
-                </template>
               </button>
-              <button
-                v-else
-                @click="removeItemFromCart"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-              >
-                Remove From Cart
-                <template
-                  v-if="cartItemsLoading.length > 0 && cartItemsLoading.indexOf(coffee.variants[0].id) !== -1"
-                >
-                  <svg
-                    class="h-4 w-4 rotate ml-2"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="spinner"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
-                    />
-                  </svg>
-                </template>
-              </button>
+            </div>
+            <div>
             </div>
           </div>
         </div>
@@ -145,7 +123,8 @@ export default {
     return {
       coffee: {},
       collections: [],
-      products: []
+      products: [],
+      selectedType: 'Whole Bean'
     };
   },
   head() {
@@ -183,10 +162,17 @@ export default {
   },
   methods: {
     addItemToCart() {
-      this.$store.dispatch("coffee/addItemToCart", {
-        lineItemID: this.coffee.variants[0].id,
-        checkoutID: this.checkout
-      });
+      if(this.selectedType === 'Whole Bean') {
+        this.$store.dispatch("coffee/addItemToCart", {
+          lineItemID: this.coffee.variants[0].id,
+          checkoutID: this.checkout
+        });
+      } else {
+        this.$store.dispatch("coffee/addItemToCart", {
+          lineItemID: this.coffee.variants[1].id,
+          checkoutID: this.checkout
+        });
+      }
     },
     removeItemFromCart() {
       this.$store.dispatch("coffee/removeItemFromCart", {

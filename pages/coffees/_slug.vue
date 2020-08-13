@@ -91,8 +91,7 @@
             <div class="mt-12 mb-6">
               <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Type</label>
               <select v-model="selectedType" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
-                <option value="Whole Bean" selected>Whole Bean</option>
-                <option value="Ground">Ground</option>
+                <option v-for="variant in coffee.variants" :key="variant.id" :value="variant.id">{{variant.title}}</option>
               </select>
             </div>
             <div class="flex items-center justify-center flex-col mt-12">
@@ -156,6 +155,7 @@ export default {
   },
   async fetch() {
     this.coffee = await this.$shopify.product.fetch(this.$route.params.slug);
+    this.selectedType = this.coffee.variants[0].id;
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
     this.products = await this.$shopify.product.fetchAll();
   },
@@ -170,20 +170,12 @@ export default {
         this.quantity++;
       }
     },
-    addItemToCart() {
-      if(this.selectedType === 'Whole Bean') {
+    addItemToCart(coffee) {
         this.$store.dispatch("coffee/addItemToCart", {
-          lineItemID: this.coffee.variants[0].id,
+          lineItemID: this.selectedType,
           quantity: this.quantity,
           checkoutID: this.checkout
         });
-      } else {
-        this.$store.dispatch("coffee/addItemToCart", {
-          lineItemID: this.coffee.variants[1].id,
-          quantity: this.quantity,
-          checkoutID: this.checkout
-        });
-      }
     },
     removeItemFromCart() {
       this.$store.dispatch("coffee/removeItemFromCart", {

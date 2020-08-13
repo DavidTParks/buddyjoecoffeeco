@@ -74,8 +74,7 @@
         id="location"
         class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
       >
-        <option value="Whole Bean" selected>Whole Bean</option>
-        <option value="Ground">Ground</option>
+        <option v-for="variant in product.variants" :key="variant.id" :value="variant.id">{{variant.title}}</option>
       </select>
     </div>
     <div class="flex items-center justify-center">
@@ -99,29 +98,21 @@ export default {
   },
   data() {
     return {
-      selectedType: "Whole Bean",
+      selectedType: this.product.variants[0].id,
       quantity: 1
     };
   },
   methods: {
     addItemToCart(coffee) {
-      if (this.selectedType === "Whole Bean") {
         this.$store.dispatch("coffee/addItemToCart", {
-          lineItemID: this.product.variants[0].id,
+          lineItemID: this.selectedType,
           quantity: this.quantity,
           checkoutID: this.checkout
         });
-      } else {
-        this.$store.dispatch("coffee/addItemToCart", {
-          lineItemID: this.product.variants[1].id,
-          quantity: this.quantity,
-          checkoutID: this.checkout
-        });
-      }
     },
     removeItemFromCart() {
       this.$store.dispatch("coffee/removeItemFromCart", {
-        lineItemID: this.product.variants[0].id,
+        lineItemID: this.selectedType,
         checkoutID: this.checkout
       });
     },

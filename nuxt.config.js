@@ -1,6 +1,3 @@
-require("dotenv").config();
-const fetch = require("node-fetch");
-const shopify = require("shopify-buy");
 export default {
   mode: "universal",
   target: 'static',

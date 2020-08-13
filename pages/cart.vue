@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-100 pt-24">
+  <div class="min-h-screen bg-gray-100 pt-24 pb-48">
     <div class="max-w-5xl mx-auto pt-32 px-4">
       <h1
         class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl text-center"

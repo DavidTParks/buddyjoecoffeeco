@@ -75,6 +75,19 @@
             <p
               class="text-base text-gray-900 mt-4 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0"
             >{{coffee.description}}</p>
+            <div class="mt-12 flex flex-col">
+              <p class="mb-3">Quantity: {{quantity}} {{ quantity > 1 ? 'bags' : 'bag'}}</p>
+              <div class="inline-flex">
+                <span class="relative z-0 inline-flex shadow-sm">
+                  <button @click="decrementQuantity" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150" aria-label="Previous">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="minus w-6 h-6"><path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <button @click="incrementQuantity" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150" aria-label="Next">
+                    <svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                  </button>
+                </span>
+              </div>
+            </div>
             <div class="mt-12 mb-6">
               <label for="location" class="block text-sm leading-5 font-medium text-gray-700">Type</label>
               <select v-model="selectedType" id="location" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
@@ -106,6 +119,7 @@ export default {
   layout: "detail",
   data() {
     return {
+      quantity: 1,
       coffee: {},
       collections: [],
       products: [],
@@ -146,15 +160,27 @@ export default {
     this.products = await this.$shopify.product.fetchAll();
   },
   methods: {
+    decrementQuantity() {
+      if(this.quantity > 1) {
+        this.quantity--;
+      }
+    },
+    incrementQuantity() {
+      if(this.quantity < 3) {
+        this.quantity++;
+      }
+    },
     addItemToCart() {
       if(this.selectedType === 'Whole Bean') {
         this.$store.dispatch("coffee/addItemToCart", {
           lineItemID: this.coffee.variants[0].id,
+          quantity: this.quantity,
           checkoutID: this.checkout
         });
       } else {
         this.$store.dispatch("coffee/addItemToCart", {
           lineItemID: this.coffee.variants[1].id,
+          quantity: this.quantity,
           checkoutID: this.checkout
         });
       }

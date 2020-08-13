@@ -74,11 +74,10 @@ export const actions = {
   },
 
   async addItemToCart({ commit, state }, buyInfo) {
-
       const lineItemsToAdd = [
           {
               variantId: buyInfo.lineItemID,
-              quantity: 1,
+              quantity: buyInfo.quantity,
           },
       ];
       commit('ADD_CART_ITEM_LOADING', buyInfo.lineItemID);

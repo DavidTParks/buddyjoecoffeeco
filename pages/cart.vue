@@ -45,7 +45,7 @@
                 </td>
                 <td class="text-right">${{lineItem.variant.price}}</td>
                 <td class="text-center">{{lineItem.quantity}}</td>
-                <td class="text-right">${{lineItem.variant.price}}</td>
+                <td class="text-right">${{lineItem.variant.price * lineItem.quantity}}</td>
               </tr>
             </template>
           </tbody>

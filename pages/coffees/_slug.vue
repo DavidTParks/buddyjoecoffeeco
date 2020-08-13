@@ -100,7 +100,7 @@
                 @click="addItemToCart"
                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
-                Add To Cart
+                ${{quantity * 14.99}} Add To Cart
               </button>
             </div>
             <div>

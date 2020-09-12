@@ -16,7 +16,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/ui": "^0.5.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nuxt": "^2.14.0",
     "nuxt-shopify": "^1.10.3",
     "nuxt-svg-loader": "^1.2.0",
